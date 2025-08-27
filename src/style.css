@@ -1526,3 +1526,98 @@ body {
   font-size: var(--font-size-sm);
   margin-top: var(--space-4);
 }
+
+.loading-spinner {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  color: var(--color-primary);
+}
+
+
+/* nabar css */
+.neo-navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #153A3F;
+  padding: 18px 40px;
+  box-sizing: border-box;
+  min-height: 65px;
+}
+
+.neo-logo-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-logo-link {
+  text-decoration: none;
+}
+
+.neo-logo-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #36CDF0;
+  letter-spacing: 1px;
+  margin-bottom: -5px;
+}
+
+.neo-logo-tagline {
+  font-size: 1.05rem;
+  color: #94A3B8;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-left: 2px;
+}
+
+.neo-nav-links {
+  display: flex;
+  gap: 38px;
+  list-style: none;
+  margin: 0 28px 0 0;
+}
+
+.neo-nav-link {
+  font-size: 1.12rem;
+  color: #A2AFB7;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.neo-nav-link:hover,
+.neo-nav-link.active {
+  color: #36CDF0;
+}
+
+.neo-navbar-actions {
+  display: flex;
+  gap: 18px;
+}
+
+.neo-btn.neo-btn-primary {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: #36CDF0;
+  color: #153A3F;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 28px;
+  margin-left: 0;
+  cursor: pointer;
+  box-shadow: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.neo-btn.neo-btn-primary:hover {
+  background: #22A6C8;
+  color: #fff;
+}
+
+@media (max-width:900px) {
+  .neo-navbar { flex-direction: column; align-items: flex-start; padding: 14px 15px; }
+  .neo-nav-links { gap: 16px; margin: 10px 0; }
+  .neo-navbar-actions { margin-top: 12px; gap: 10px; }
+}

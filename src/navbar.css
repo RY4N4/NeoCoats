@@ -1,0 +1,201 @@
+/* Container for the contact form - consistent with main container style */
+
+/* .contact-section.container {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.1);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #222;
+} */
+
+/* Heading */
+/* .contact-section h1 {
+  margin-bottom: 30px;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+} */
+
+/* Form input, textarea styling */
+/* .contact-section form input,
+.contact-section form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+  outline-offset: 2px;
+} */
+
+/* .contact-section form input:focus,
+.contact-section form textarea:focus {
+  border-color: #0077cc;
+  outline: none;
+} */
+
+/* Textarea fixed height with vertical resize */
+/* .contact-section form textarea {
+  min-height: 120px;
+  resize: vertical;
+} */
+
+/* Submit button styling */
+/* .contact-section form button.btn.btn--primary {
+  width: 100%;
+  padding: 14px;
+  background-color: #0077cc;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.contact-section form button.btn.btn--primary:disabled {
+  background-color: #6699cc;
+  cursor: not-allowed;
+}
+
+.contact-section form button.btn.btn--primary:hover:not(:disabled) {
+  background-color: #005fa3;
+} */
+
+/* Validation error message styling */
+/* .error {
+  color: #d9534f;
+  font-size: 0.9rem;
+  margin-top: -10px;
+  margin-bottom: 15px;
+  display: block;
+  font-weight: 500; 
+}*/
+
+
+/* Navbar styles for consistent page navigation */
+/* .primary-nav {
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+  padding: 15px 0;
+  margin-bottom: 20px;
+}
+
+.primary-nav a {
+  color: #fff;
+  font-weight: 600;
+  margin: 0 18px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.primary-nav a:hover {
+  color: #ff9900;
+} */
+
+/* Responsive adjustments */
+/* @media (max-width: 768px) {
+  .contact-section.container {
+    margin: 20px 15px;
+    padding: 20px;
+  }
+  .primary-nav {
+    flex-direction: column;
+  }
+  .primary-nav a {
+    margin: 10px 0;
+  }
+} */
+
+/* Mobile menu toggle button */
+
+.mobile-menu-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 22px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 20px;
+  z-index: 1100;
+}
+
+.mobile-menu-toggle span {
+  height: 3px;
+  width: 100%;
+  background: #36CDF0;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* Animate hamburger icon when open */
+.mobile-menu-toggle.open span:nth-child(1) {
+  transform: translateY(9.5px) rotate(45deg);
+}
+
+.mobile-menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.mobile-menu-toggle.open span:nth-child(3) {
+  transform: translateY(-9.5px) rotate(-45deg);
+}
+
+/* Hide nav links by default on mobile */
+.neo-nav-links {
+  display: flex;
+  gap: 38px;
+  list-style: none;
+  margin: 0 28px 0 0;
+  transition: max-height 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 900px) {
+  .mobile-menu-toggle {
+    display: flex;
+  }
+
+  .neo-nav-links {
+    position: fixed;
+    top: 65px; /* height of navbar */
+    left: 0;
+    right: 0;
+    background: #153A3F;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    padding-left: 0;
+    margin: 0;
+    transition: max-height 0.4s ease;
+    z-index: 1000;
+  }
+
+  /* Show menu when active */
+  .neo-nav-links.active {
+    max-height: 300px; /* enough for menu items */
+    padding: 20px 0;
+  }
+
+  .neo-nav-links li {
+    margin: 12px 0;
+    text-align: center;
+  }
+
+  .neo-navbar-actions {
+    display: none; /* Hide buttons on mobile or optionally move inside menu */
+  }
+}
